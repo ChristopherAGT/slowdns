@@ -340,3 +340,14 @@ main_menu() {
     echo "  [1] Instalar SlowDNS (DNSTT)"
     echo "  [2] Abrir panel de administración"
     echo "  [0] Salir"
+    echo "════════════════════════════════════════════════════════════"
+    read -rp " Ingresa una opción: " main_choice
+
+    case $main_choice in
+      1) installer ;;
+      2) panel ;;
+      0) echo "Saliendo..."; exit 0 ;;
+      *) echo "Opción inválida."; sleep 1 ;;
+    esac
+  done
+}
