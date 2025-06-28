@@ -32,9 +32,8 @@ download_binaries(){
   # Binarios a descargar
   server_bin="dnstt-server-$arch"
   client_bin="dnstt-client-$arch"
-  pubkey="server.pub"
 
-  for bin in "$server_bin" "$client_bin" "$pubkey"; do
+  for bin in "$server_bin" "$client_bin"; do
     url="$RELEASE_URL/$bin"
     echo -n "Descargando $bin... "
     if wget -q --show-progress -O "$INSTALL_DIR/$bin" "$url"; then
